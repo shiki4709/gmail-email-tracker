@@ -1,0 +1,54 @@
+/* Email Tracker - Gmail injected styles */
+
+/* Checkmark badges in email list */
+.email-tracker-badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 6px;
+  padding: 1px 4px;
+  border-radius: 3px;
+  vertical-align: middle;
+  line-height: 1.2;
+}
+
+.email-tracker-sent {
+  color: #9e9e9e;
+}
+
+.email-tracker-read {
+  color: #1a73e8;
+  background: #e8f0fe;
+}
+
+/* Banner in email view */
+.email-tracker-banner {
+  padding: 10px 16px;
+  margin: 8px 0;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: "Google Sans", Roboto, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.email-tracker-banner-read {
+  background: #e8f5e9;
+  border: 1px solid #a5d6a7;
+  color: #2e7d32;
+}
+
+.email-tracker-banner-sent {
+  background: #fff3e0;
+  border: 1px solid #ffcc80;
+  color: #e65100;
+}
+
+.email-tracker-banner-icon {
+  font-size: 18px;
+}
+
+.email-tracker-banner strong {
+  font-weight: 600;
+}
