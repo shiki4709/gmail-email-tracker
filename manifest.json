@@ -5,6 +5,12 @@
   "description": "Track email opens directly in Gmail with read receipts",
   "permissions": ["storage"],
   "host_permissions": ["https://mail.google.com/*"],
+  "web_accessible_resources": [
+    {
+      "resources": ["inject.js"],
+      "matches": ["https://mail.google.com/*"]
+    }
+  ],
   "background": {
     "service_worker": "background.js"
   },

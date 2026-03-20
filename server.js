@@ -1,6 +1,5 @@
-// Lightweight tracking pixel server
+// Email Tracker Server
 // Run: node server.js
-// Expose with: npx localtunnel --port 3000 (or ngrok http 3000)
 
 const http = require("http");
 const fs = require("fs");
@@ -29,14 +28,39 @@ function saveDB(data) {
 const server = http.createServer((req, res) => {
   const url = new URL(req.url, `http://${req.headers.host}`);
 
-  // CORS headers for the extension
   res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET, OPTIONS");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
   if (req.method === "OPTIONS") {
     res.writeHead(204);
     res.end();
+    return;
+  }
+
+  // POST /register — store email metadata when sending
+  if (url.pathname === "/register" && req.method === "POST") {
+    let body = "";
+    req.on("data", (chunk) => (body += chunk));
+    req.on("end", () => {
+      try {
+        const { trackingId, recipient, subject } = JSON.parse(body);
+        const db = loadDB();
+        db[trackingId] = {
+          recipient: recipient || "unknown",
+          subject: subject || "(no subject)",
+          registeredAt: new Date().toISOString(),
+          opens: [],
+        };
+        saveDB(db);
+        console.log(`[REGISTERED] ${trackingId} → ${recipient} | ${subject}`);
+        res.writeHead(200, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ success: true }));
+      } catch {
+        res.writeHead(400, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ error: "Invalid JSON" }));
+      }
+    });
     return;
   }
 
@@ -46,7 +70,7 @@ const server = http.createServer((req, res) => {
     if (trackingId) {
       const db = loadDB();
       if (!db[trackingId]) {
-        db[trackingId] = { opens: [] };
+        db[trackingId] = { recipient: "unknown", subject: "unknown", opens: [] };
       }
       db[trackingId].opens.push({
         timestamp: new Date().toISOString(),
@@ -54,12 +78,13 @@ const server = http.createServer((req, res) => {
         ip: req.headers["x-forwarded-for"] || req.socket.remoteAddress,
       });
       saveDB(db);
+
+      const entry = db[trackingId];
       console.log(
-        `[OPEN] ${trackingId} — ${db[trackingId].opens.length} total opens`
+        `[OPEN] ${entry.recipient} | "${entry.subject}" | ${entry.opens.length} total opens`
       );
     }
 
-    // Return the pixel with no-cache headers
     res.writeHead(200, {
       "Content-Type": "image/gif",
       "Content-Length": PIXEL.length,
@@ -71,7 +96,8 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  // GET /opens?id=xxx — check opens for a specific tracking ID
+  // GET /opens — list all tracked emails with open data
+  // GET /opens?id=xxx — get specific tracking entry
   if (url.pathname === "/opens") {
     const trackingId = url.searchParams.get("id");
     const db = loadDB();
@@ -82,14 +108,22 @@ const server = http.createServer((req, res) => {
       res.end(
         JSON.stringify(
           entry
-            ? { trackingId, openCount: entry.opens.length, opens: entry.opens }
-            : { trackingId, openCount: 0, opens: [] }
+            ? {
+                trackingId,
+                recipient: entry.recipient || "unknown",
+                subject: entry.subject || "unknown",
+                openCount: entry.opens.length,
+                opens: entry.opens,
+              }
+            : { trackingId, recipient: "unknown", subject: "unknown", openCount: 0, opens: [] }
         )
       );
     } else {
-      // Return all tracking data
+      // Return all with full info
       const summary = Object.entries(db).map(([id, data]) => ({
         trackingId: id,
+        recipient: data.recipient || "unknown",
+        subject: data.subject || "unknown",
         openCount: data.opens.length,
         lastOpen: data.opens.length
           ? data.opens[data.opens.length - 1].timestamp
@@ -101,16 +135,17 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  // Default
   res.writeHead(200, { "Content-Type": "text/plain" });
   res.end("Email Tracker Server Running");
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3100;
+process.stdout.write("\033]0;Gmail Email Tracker\007");
 server.listen(PORT, () => {
-  console.log(`Email tracker server running on http://localhost:${PORT}`);
-  console.log(`Tracking pixel URL: http://localhost:${PORT}/track?id=<ID>`);
-  console.log(`Check opens: http://localhost:${PORT}/opens`);
-  console.log("");
-  console.log("Expose publicly with: npx localtunnel --port 3000");
+  console.log(`Email tracker running on http://localhost:${PORT}`);
+  console.log(`\nEndpoints:`);
+  console.log(`  POST /register  — register email metadata`);
+  console.log(`  GET  /track?id= — tracking pixel`);
+  console.log(`  GET  /opens     — all tracked emails`);
+  console.log(`  GET  /opens?id= — specific email\n`);
 });

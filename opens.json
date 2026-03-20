@@ -1,0 +1,188 @@
+{
+  "et_1773863727790_dv2xpj796": {
+    "recipient": "unknown",
+    "subject": "unknown",
+    "opens": [
+      {
+        "timestamp": "2026-03-18T19:55:29.149Z",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "ip": "::1"
+      }
+    ]
+  },
+  "et_1773863727796_hsqzpcn91": {
+    "recipient": "unknown",
+    "subject": "unknown",
+    "opens": [
+      {
+        "timestamp": "2026-03-18T19:55:29.210Z",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "ip": "::1"
+      }
+    ]
+  },
+  "et_1773865720428_5tckedvgd": {
+    "recipient": "unknown",
+    "subject": "unknown",
+    "opens": [
+      {
+        "timestamp": "2026-03-18T20:28:40.454Z",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "ip": "::1"
+      }
+    ]
+  },
+  "et_1773865720433_hwnb2dvr3": {
+    "recipient": "unknown",
+    "subject": "unknown",
+    "opens": [
+      {
+        "timestamp": "2026-03-18T20:28:40.464Z",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "ip": "::1"
+      }
+    ]
+  },
+  "et_1773867179910_w9wwhno9w": {
+    "recipient": "unknown",
+    "subject": "unknown",
+    "opens": [
+      {
+        "timestamp": "2026-03-18T20:52:59.938Z",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "ip": "::1"
+      }
+    ]
+  },
+  "et_1773867179917_8jpkgvjsl": {
+    "recipient": "unknown",
+    "subject": "unknown",
+    "opens": [
+      {
+        "timestamp": "2026-03-18T20:52:59.941Z",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "ip": "::1"
+      }
+    ]
+  },
+  "et_1773867251491_hiht35xre": {
+    "recipient": "unknown",
+    "subject": "unknown",
+    "opens": [
+      {
+        "timestamp": "2026-03-18T20:54:11.513Z",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "ip": "::1"
+      }
+    ]
+  },
+  "et_1773867251495_u3h68jfti": {
+    "recipient": "unknown",
+    "subject": "unknown",
+    "opens": [
+      {
+        "timestamp": "2026-03-18T20:54:11.516Z",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "ip": "::1"
+      }
+    ]
+  },
+  "et_1773872056816_vhq9f3oij": {
+    "recipient": "unknown",
+    "subject": "unknown",
+    "opens": [
+      {
+        "timestamp": "2026-03-18T22:14:16.850Z",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "ip": "::1"
+      }
+    ]
+  },
+  "et_1773872056829_j14rt90pw": {
+    "recipient": "unknown",
+    "subject": "unknown",
+    "opens": [
+      {
+        "timestamp": "2026-03-18T22:14:16.854Z",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "ip": "::1"
+      }
+    ]
+  },
+  "et_1773872122604_sn0ia9yce": {
+    "recipient": "unknown",
+    "subject": "unknown",
+    "opens": [
+      {
+        "timestamp": "2026-03-18T22:15:22.618Z",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "ip": "::1"
+      }
+    ]
+  },
+  "et_1773872122606_5ugz8hjh3": {
+    "recipient": "unknown",
+    "subject": "unknown",
+    "opens": [
+      {
+        "timestamp": "2026-03-18T22:15:22.625Z",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "ip": "::1"
+      }
+    ]
+  },
+  "et_1773872145571_gqnhvvo0g": {
+    "recipient": "unknown",
+    "subject": "unknown",
+    "opens": [
+      {
+        "timestamp": "2026-03-18T22:15:45.579Z",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "ip": "::1"
+      },
+      {
+        "timestamp": "2026-03-18T22:15:45.738Z",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "ip": "::1"
+      }
+    ]
+  },
+  "et_1773872168605_webeb2u2k": {
+    "recipient": "unknown",
+    "subject": "unknown",
+    "opens": [
+      {
+        "timestamp": "2026-03-18T22:16:08.618Z",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "ip": "::1"
+      },
+      {
+        "timestamp": "2026-03-18T22:16:08.774Z",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "ip": "::1"
+      }
+    ]
+  },
+  "et_1773874613024_edg4082k9": {
+    "recipient": "unknown",
+    "subject": "unknown",
+    "opens": [
+      {
+        "timestamp": "2026-03-18T22:56:53.049Z",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "ip": "::1"
+      }
+    ]
+  },
+  "et_1773874613030_kxr5dx8ue": {
+    "recipient": "unknown",
+    "subject": "unknown",
+    "opens": [
+      {
+        "timestamp": "2026-03-18T22:56:53.057Z",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+        "ip": "::1"
+      }
+    ]
+  }
+}
